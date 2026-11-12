@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="Персональная панель путешественника: задачи, погода и курсы валют.">
+  <title>Панель путешественника</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Панель путешественника">
+        <span class="brand-mark">✦</span>
+        <span>trip<span class="brand-light">mate</span></span>
+      </a>
+      <div class="sidebar-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <nav class="side-nav" aria-label="Основная навигация">
+        <a class="nav-link active" href="#dashboard"><span class="nav-icon">▦</span> Моя панель</a>
+        <a class="nav-link" href="#widgets"><span class="nav-icon">＋</span> Виджеты</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="tip-card">
+          <div class="tip-icon">✈</div>
+          <strong>Путешествуй налегке</strong>
+          <p>Всё важное для поездки — в одном месте.</p>
+        </div>
+        <div class="profile">
+          <div class="avatar">П</div>
+          <div><strong>Путешественник</strong><span>Личный кабинет</span></div>
+          <span class="profile-dots">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="dashboard">
+      <header class="topbar">
+        <div class="breadcrumb">Рабочее пространство <span>/</span> Моя панель</div>
+        <div class="topbar-right"><span class="today-pill"><span class="status-dot"></span> Ваш план поездки</span></div>
+      </header>
+
+      <section class="welcome">
+        <div>
+          <div class="eyebrow">ВАШ ЦИФРОВОЙ ПОМОЩНИК</div>
+          <h1>Планируйте с удовольствием<span>.</span></h1>
+          <p>Задачи, погода и курсы валют — всё для комфортного путешествия.</p>
+        </div>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+          <div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+          <div class="art-plane">✈</div>
+        </div>
+      </section>
+
+      <section class="widget-toolbar" id="widgets">
+        <div><h2>Мои виджеты</h2><p>Добавляйте нужные инструменты на панель</p></div>
+        <div class="add-controls">
+          <button class="add-button" data-add="todo"><span>＋</span> Задачи</button>
+          <button class="add-button" data-add="weather"><span>＋</span> Погода</button>
+          <button class="add-button" data-add="currency"><span>＋</span> Валюта</button>
+        </div>
+      </section>
+
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <section id="widget-grid" class="widget-grid" aria-label="Мои виджеты"></section>
+
+      <footer class="footer">
+        <span>tripmate <span class="footer-dot">·</span> Ваша поездка начинается здесь</span>
+        <span>Данные погоды и валют загружаются из внешних API</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
